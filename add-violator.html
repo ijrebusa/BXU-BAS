@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add New Violator - BXU BAS</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section class="section">
+            <h1>Add New Violator</h1>
+            <form id="violatorForm">
+                <label for="name">Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <label for="typeOfInspection">Type of Inspection:</label>
+                <select id="typeOfInspection" name="typeOfInspection" required>
+                    <option value="regular">Regular</option>
+                    <option value="night">Night</option>
+                    <option value="special_change_address">Special (Change Address)</option>
+                    <option value="special_verification">Special (Verification)</option>
+                    <option value="special_complaint">Special (Complaint)</option>
+                    <option value="special_retirement">Special (Retirement)</option>
+                    <option value="joint">Joint</option>
+                </select>
+
+                <label for="status">Status:</label>
+                <select id="status" name="status" required>
+                    <option value="low_income">Low Income</option>
+                    <option value="with_permit">With Permit</option>
+                    <option value="without_permit">Without Permit</option>
+                    <option value="already_closed">Already Closed</option>
+                    <option value="already_closed_new_business">Already Closed but New Business Operating</option>
+                    <option value="still_operating">Still Operating</option>
+                </select>
+
+                <label for="violationStatus">Violation Status:</label>
+                <select id="violationStatus" name="violationStatus" required>
+                    <option value="with_violation">With Violation</option>
+                    <option value="without_violation">Without Violation</option>
+                </select>
+
+                <div id="natureOfViolationContainer" style="display: none;">
+                    <label for="natureOfViolation">Nature of Violation:</label>
+                    <select id="natureOfViolation" name="natureOfViolation">
+                        <option value="no_mayors_permit">NO MAYOR'S PERMIT</option>
+                        <option value="non_display_of_mayors_permit">NON-DISPLAY OF MAYOR'S PERMIT</option>
+                        <option value="displaying_dilapidated_mayors_permit">DISPLAYING DILAPIDATED MAYOR'S PERMIT</option>
+                        <option value="displaying_counterfeit_mayors_permit">DISPLAYING A COUNTERFEIT MAYOR'S PERMIT</option>
+                        <option value="understatement_of_gross_sales">UNDERSTATEMENT AND/OR INCORRECT DECLARATION OF GROSS SALES OR RECEIPTS</option>
+                        <option value="falsification_of_business_permit">FALSIFICATION AND/OR ALTERATION OF BUSINESS PERMIT</option>
+                        <option value="sidewalk_obstruction">SIDEWALK/STREET/SIDESTREET OBSTRUCTION</option>
+                        <option value="non_posting_of_notice">NON-POSTING OF NOTICE</option>
+                        <option value="non_declaration_of_business">NON-DECLARATION OF TYPE OR NATURE OF BUSINESS</option>
+                        <option value="drinking_in_public_places">DRINKING IN PUBLIC PLACES</option>
+                        <option value="unauthorized_serving_of_liquor">UNAUTHORIZED SERVING OF LIQUOR</option>
+                        <option value="unauthorized_selling_of_liquor">UNAUTHORIZED SELLING OF LIQUOR</option>
+                    </select>
+                </div>
+
+                <div id="inspectionReportContainer" style="display: none;">
+                    <label for="inspectionReportFormNo">Inspection Report Form No.:</label>
+                    <input type="text" id="inspectionReportFormNo" name="inspectionReportFormNo">
+
+                    <label for="scannedCopy">Scanned Copy of Inspection Report Form:</label>
+                    <input type="file" id="scannedCopy" name="scannedCopy">
+                </div>
+
+                <label for="violationReceiptNo">Violation Receipt No.:</label>
+                <input type="text" id="violationReceiptNo" name="violationReceiptNo" required>
+
+                <label for="dateOfViolation">Date of Violation:</label>
+                <input type="date" id="dateOfViolation" name="dateOfViolation" required>
+
+                <label for="dueDate">Due Date:</label>
+                <input type="date" id="dueDate" name="dueDate" required>
+
+                <label for="phoneNumber">Phone Number:</label>
+                <input type="text" id="phoneNumber" name="phoneNumber" required>
+
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <button type="submit">Add Violator</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, Agusan del Norte
+    </footer>
+
+    <script src="add-violator.js"></script>
+</body>
+</html>

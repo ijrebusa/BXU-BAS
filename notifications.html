@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXU BAS - Notifications</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="notifications.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="notifications" class="section">
+            <h1>Notifications</h1>
+            <h2>Upcoming Due Violators</h2>
+            <ul id="upcomingDueList" class="notification-list">
+                <!-- Upcoming due violators will be displayed here dynamically -->
+            </ul>
+            <h2>Overdue Violators</h2>
+            <ul id="overdueList" class="notification-list">
+                <!-- Overdue violators will be displayed here dynamically -->
+            </ul>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, Agusan del Norte
+    </footer>
+
+    <script src="notifications.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedSettings = JSON.parse(localStorage.getItem("settings"));
+            if (savedSettings) {
+                document.documentElement.style.setProperty('--bg-color', savedSettings.bgColor);
+                document.documentElement.style.setProperty('--text-color', savedSettings.textColor);
+                document.documentElement.style.setProperty('--font-size', savedSettings.fontSize + 'px');
+                document.documentElement.style.setProperty('--navbar-color', savedSettings.navbarColor);
+    
+                const navbar = document.querySelector(".navbar");
+                navbar.style.backgroundColor = savedSettings.navbarColor;
+    
+                if (savedSettings.mode === "dark") {
+                    document.documentElement.style.backgroundColor = "#333";
+                    document.documentElement.style.color = "#f0f8ff";
+                } else if (savedSettings.mode === "light") {
+                    document.documentElement.style.backgroundColor = "#ffffff";
+                    document.documentElement.style.color = "#000000";
+                } else {
+                    document.documentElement.style.backgroundColor = savedSettings.bgColor;
+                    document.documentElement.style.color = savedSettings.textColor;
+                }
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

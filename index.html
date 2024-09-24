@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXU Business Authority Sentinel</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="home" class="section welcome-section">
+            <h1>Welcome to BXU Business Authority Sentinel</h1>
+            <p>BXU BAS is your comprehensive solution for managing business compliance and violations in Butuan City. Our system streamlines the documentation process, provides real-time monitoring, and ensures timely notifications for business violators. With BXU BAS, you can efficiently manage and monitor business activities, ensuring adherence to regulatory ordinances and promoting a fair business environment.</p>
+            <p>Explore the features of BXU BAS through the navigation menu above and see how our system can help you maintain order, fairness, and safety within the business community of Butuan City.</p>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, ADN
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedSettings = JSON.parse(localStorage.getItem("settings"));
+            if (savedSettings) {
+                document.documentElement.style.setProperty('--bg-color', savedSettings.bgColor);
+                document.documentElement.style.setProperty('--text-color', savedSettings.textColor);
+                document.documentElement.style.setProperty('--font-size', savedSettings.fontSize + 'px');
+                document.documentElement.style.setProperty('--navbar-color', savedSettings.navbarColor);
+    
+                const navbar = document.querySelector(".navbar");
+                navbar.style.backgroundColor = savedSettings.navbarColor;
+    
+                if (savedSettings.mode === "dark") {
+                    document.documentElement.style.backgroundColor = "#333";
+                    document.documentElement.style.color = "#f0f8ff";
+                } else if (savedSettings.mode === "light") {
+                    document.documentElement.style.backgroundColor = "#ffffff";
+                    document.documentElement.style.color = "#000000";
+                } else {
+                    document.documentElement.style.backgroundColor = savedSettings.bgColor;
+                    document.documentElement.style.color = savedSettings.textColor;
+                }
+            }
+        });
+    </script>
+    
+    
+</body>
+</html>

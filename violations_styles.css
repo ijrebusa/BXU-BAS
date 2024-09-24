@@ -1,0 +1,584 @@
+/* Additional styles for violations page */
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border don't increase element's dimensions */
+}
+
+/* Ensure consistent font and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark grey text */
+    font-size: 14px; /* Smaller default font size for better readability */
+}
+
+/* Container for entire page content */
+.container {
+    padding: 20px; /* Padding around the content */
+}
+
+/* Section styling */
+.section {
+    background-color: #fff; /* White background for sections */
+    padding: 15px; /* Padding inside sections */
+    margin-bottom: 20px; /* Space below each section */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading style */
+.section h1 {
+    margin-top: 0; /* No top margin for headings */
+    color: #007bff; /* Blue heading color */
+    font-size: 1.2em; /* Larger font size for headings */
+}
+
+/* Search bar and add button container */
+.search-add-container {
+    display: flex; /* Arrange items horizontally */
+    justify-content: space-between; /* Space between search bar and button */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 10px; /* Space below container */
+}
+
+/* Styling for search input */
+#searchBar {
+    width: 100%; /* Full width of parent container */
+    padding: 8px; /* Padding inside input field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Sort dropdown container */
+.sort-container {
+    margin-bottom: 10px; /* Space below sort dropdown */
+}
+
+/* Styling for sort dropdown */
+#sortOptions {
+    padding: 6px; /* Padding inside dropdown */
+    font-size: 0.9em; /* Smaller font size for dropdown */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling if table overflows */
+}
+
+/* Styling for table */
+#violatorsTable {
+    width: 100%; /* Full width of container */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-bottom: 10px; /* Space below table */
+}
+
+/* Table header and cell styling */
+#violatorsTable th,
+#violatorsTable td {
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Left-aligned text */
+    font-size: 0.9em; /* Smaller font size for table cells */
+}
+
+/* Header row background and text color */
+#violatorsTable th {
+    background-color: #007bff; /* Blue background for headers */
+    color: white; /* White text color */
+}
+
+/* Alternating row background color */
+#violatorsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background */
+}
+
+/* Styling for action buttons */
+.button {
+    padding: 8px 16px; /* Padding inside button */
+    background-color: #007bff; /* Blue background color */
+    color: white; /* White text color */
+    text-decoration: none; /* Remove underline */
+    border-radius: 4px; /* Rounded corners */
+    transition: background-color 0.3s ease; /* Smooth background color transition */
+}
+
+/* Button hover effect */
+.button:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #007bff; /* Blue background for footer */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside footer */
+    text-align: right; /* Right-align text */
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    font-size: 0.8em; /* Smaller font size */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Additional styles for violations page */
+
+/* Reset default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border don't increase element's dimensions */
+}
+
+/* Ensure consistent font and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark grey text */
+    font-size: 14px; /* Smaller default font size for better readability */
+}
+
+/* Container for entire page content */
+.container {
+    padding: 20px; /* Padding around the content */
+}
+
+/* Section styling */
+.section {
+    background-color: #fff; /* White background for sections */
+    padding: 15px; /* Padding inside sections */
+    margin-bottom: 20px; /* Space below each section */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading style */
+.section h1 {
+    margin-top: 0; /* No top margin for headings */
+    color: #007bff; /* Blue heading color */
+    font-size: 1.2em; /* Larger font size for headings */
+}
+
+/* Search bar and add button container */
+.search-add-container {
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #fff; /* White background */
+    padding: 10px 20px; /* Padding around */
+    margin-bottom: 10px; /* Space below */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Styling for search input */
+#searchBar {
+    width: 100%; /* Full width of parent container */
+    padding: 8px; /* Padding inside input field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Sort dropdown container */
+.sort-container {
+    margin-bottom: 10px; /* Space below sort dropdown */
+    position: sticky; /* Sticky positioning */
+    top: 60px; /* Stick below search bar */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #fff; /* White background */
+    padding: 10px 20px; /* Padding around */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Styling for sort dropdown */
+#sortOptions {
+    padding: 6px; /* Padding inside dropdown */
+    font-size: 0.9em; /* Smaller font size for dropdown */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: visible; /* Ensure vertical scrollbar remains visible */
+    max-height: calc(100vh - 240px); /* Limit height for vertical scrolling */
+}
+
+/* Styling for table */
+#violatorsTable {
+    width: 100%; /* Full width of container */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-bottom: 10px; /* Space below table */
+}
+
+/* Table header and cell styling */
+#violatorsTable th,
+#violatorsTable td {
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Left-aligned text */
+    font-size: 0.9em; /* Smaller font size for table cells */
+}
+
+/* Header row background and text color */
+#violatorsTable th {
+    background-color: #007bff; /* Blue background for headers */
+    color: white; /* White text color */
+}
+
+/* Alternating row background color */
+#violatorsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #007bff; /* Blue background for footer */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside footer */
+    text-align: right; /* Right-align text */
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    font-size: 0.8em; /* Smaller font size */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Existing styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.navbar {
+    background-color: #007bff;
+    color: #fff;
+    padding: 15px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar .logo {
+    font-size: 1.5em;
+    font-weight: bold;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar .nav-links li {
+    margin-left: 20px;
+}
+
+.navbar .nav-links a {
+    color: #fff;
+    text-decoration: none;
+    padding: 5px 10px;
+    transition: background-color 0.3s ease;
+}
+
+.navbar .nav-links a:hover {
+    background-color: #0056b3;
+}
+
+.container {
+    flex: 1;
+    padding: 40px 20px;
+}
+
+.section {
+    background-color: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.section h1 {
+    margin-top: 0;
+    color: #007bff;
+}
+
+/* Search and Add container styling */
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+#searchBar {
+    width: 100%;
+    padding: 10px;
+    margin-right: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.button {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 4px;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #0056b3;
+}
+
+.sort-container {
+    margin-bottom: 20px;
+}
+
+#sortOptions {
+    padding: 5px;
+    font-size: 0.9em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+}
+
+/* Table container with horizontal scrolling */
+.table-container {
+    overflow-x: auto;
+    overflow-y: hidden;
+    max-height: calc(100vh - 240px);
+    position: relative;
+}
+
+#violatorsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#violatorsTable th,
+#violatorsTable td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+    font-size: 12px;
+}
+
+#violatorsTable th {
+    background-color: #007bff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#violatorsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}
+
+.footer {
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 10px;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    font-size: 0.8em;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Comments explaining each section */
+
+/* Resets default margin and padding for all elements */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; /* Ensure padding and border don't increase element's dimensions */
+}
+
+/* Ensure consistent font and background color */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f0f8ff; /* Light blue background */
+    color: #333; /* Dark grey text */
+    font-size: 14px; /* Smaller default font size for better readability */
+}
+
+/* Container for entire page content */
+.container {
+    padding: 20px; /* Padding around the content */
+}
+
+/* Section styling */
+.section {
+    background-color: #fff; /* White background for sections */
+    padding: 15px; /* Padding inside sections */
+    margin-bottom: 20px; /* Space below each section */
+    border-radius: 8px; /* Rounded corners for sections */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+/* Heading style */
+.section h1 {
+    margin-top: 0; /* No top margin for headings */
+    color: #007bff; /* Blue heading color */
+    font-size: 1.2em; /* Larger font size for headings */
+}
+
+/* Search bar and add button container */
+.search-add-container {
+    position: sticky; /* Sticky positioning */
+    top: 0; /* Stick to the top */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #fff; /* White background */
+    padding: 10px 20px; /* Padding around */
+    margin-bottom: 10px; /* Space below */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Styling for search input */
+#searchBar {
+    width: 100%; /* Full width of parent container */
+    padding: 8px; /* Padding inside input field */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+    font-size: 14px; /* Smaller font size */
+}
+
+/* Sort dropdown container */
+.sort-container {
+    margin-bottom: 10px; /* Space below sort dropdown */
+    position: sticky; /* Sticky positioning */
+    top: 60px; /* Stick below search bar */
+    z-index: 1000; /* Ensure it's above other elements */
+    background-color: #fff; /* White background */
+    padding: 10px 20px; /* Padding around */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Styling for sort dropdown */
+#sortOptions {
+    padding: 6px; /* Padding inside dropdown */
+    font-size: 0.9em; /* Smaller font size for dropdown */
+    border: 1px solid #ccc; /* Light grey border */
+    border-radius: 4px; /* Rounded corners */
+}
+
+/* Table container for horizontal scrolling */
+.table-container {
+    overflow-x: auto; /* Enable horizontal scrolling */
+    overflow-y: visible; /* Ensure vertical scrollbar remains visible */
+    max-height: calc(100vh - 240px); /* Limit height for vertical scrolling */
+}
+
+/* Styling for table */
+#violatorsTable {
+    width: 100%; /* Full width of container */
+    border-collapse: collapse; /* Collapse table borders */
+    margin-bottom: 10px; /* Space below table */
+}
+
+/* Table header and cell styling */
+#violatorsTable th,
+#violatorsTable td {
+    border: 1px solid #ccc; /* Light grey border */
+    padding: 8px; /* Padding inside cells */
+    text-align: left; /* Left-aligned text */
+    font-size: 0.9em; /* Smaller font size for table cells */
+}
+
+/* Header row background and text color */
+#violatorsTable th {
+    background-color: #007bff; /* Blue background for headers */
+    color: white; /* White text color */
+    position: sticky; /* Sticky position for headers */
+    top: 0; /* Stick to the top of the table container */
+    z-index: 2; /* Ensure header is above table content */
+}
+
+/* Alternating row background color */
+#violatorsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2; /* Light grey background */
+}
+
+/* Footer styling */
+.footer {
+    background-color: #007bff; /* Blue background for footer */
+    color: white; /* White text color */
+    padding: 10px; /* Padding inside footer */
+    text-align: right; /* Right-align text */
+    position: fixed; /* Fixed position at the bottom */
+    bottom: 0; /* Stick to the bottom */
+    width: 100%; /* Full width */
+    font-size: 0.8em; /* Smaller font size */
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for separation */
+}
+
+/* Your existing CSS code */
+/* Add the following styles */
+
+.search-add-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.sort-container {
+    margin-bottom: 20px;
+    position: sticky;
+    top: 60px;
+    z-index: 1000;
+    background-color: #fff;
+    padding: 10px 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.table-container {
+    overflow-x: auto;
+    overflow-y: visible;
+    max-height: calc(100vh - 240px);
+}
+
+#violatorsTable {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+#violatorsTable th,
+#violatorsTable td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+    font-size: 0.9em;
+}
+
+#violatorsTable th {
+    background-color: #007bff;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 1;
+}
+
+#violatorsTable tbody tr:nth-child(even) {
+    background-color: #f2f2f2;
+}

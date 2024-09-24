@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXU BAS - Violations List</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="violations_styles.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="violations" class="section">
+            <h1>Violations</h1>
+            <div class="search-add-container">
+                <input type="text" id="searchBar" placeholder="Search violator..." onkeyup="filterTable()">
+                <a href="add-violator.html" class="button">Add New Violator</a>
+            </div>
+            <div class="sort-container">
+                <label for="sortOptions">Sort by:</label>
+                <select id="sortOptions" onchange="sortTable()">
+                    <option value="alphabetical">Alphabetical</option>
+                    <option value="dateOfViolation">Date of Violation</option>
+                    <option value="numberOfViolations">Number of Violations</option>
+                    <option value="dateAdded">Date Added</option>
+                </select>
+            </div>
+            <div class="table-container">
+                <table id="violatorsTable">
+                    <thead>
+                        <tr>
+                            <th>#</th>
+                            <th>Name</th>
+                            <th>Type of Inspection</th>
+                            <th>Status</th>
+                            <th>Violation Status</th>
+                            <th>Nature of Violation</th>
+                            <th>Inspection Report Form No.</th>
+                            <th>Scanned Copy</th>
+                            <th>Violation Receipt No.</th>
+                            <th>Date of Violation</th>
+                            <th>Due Date</th>
+                            <th>Phone Number</th>
+                            <th>Email</th>
+                        </tr>
+                    </thead>
+                    <tbody id="violatorsBody">
+                        <!-- Violator entries will be added here dynamically -->
+                    </tbody>
+                </table>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, Agusan del Norte
+    </footer>
+
+    <script src="violations.js"></script>
+</body>
+</html>

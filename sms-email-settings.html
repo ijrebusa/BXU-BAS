@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXU BAS - SMS & Email Settings</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="settings.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+            <li><a href="sms-email-settings.html">SMS & Email Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="sms-email-settings" class="section">
+            <h1>SMS & Email Settings</h1>
+            <form id="smsEmailSettingsForm">
+                <div class="form-group">
+                    <label for="smsGateway">SMS Gateway API URL:</label>
+                    <input type="text" id="smsGateway" required>
+                </div>
+                <div class="form-group">
+                    <label for="smsApiKey">SMS API Key:</label>
+                    <input type="text" id="smsApiKey" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailServer">Email Server:</label>
+                    <input type="text" id="emailServer" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailUsername">Email Username:</label>
+                    <input type="text" id="emailUsername" required>
+                </div>
+                <div class="form-group">
+                    <label for="emailPassword">Email Password:</label>
+                    <input type="password" id="emailPassword" required>
+                </div>
+                <button type="submit">Save Settings</button>
+            </form>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, Agusan del Norte
+    </footer>
+
+    <script src="sms-email-settings.js"></script>
+</body>
+</html>

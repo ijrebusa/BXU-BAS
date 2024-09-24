@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BXU BAS - Reports</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="reports.css">
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">BXU BAS</div>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="violations.html">Violations</a></li>
+            <li><a href="notifications.html">Notifications</a></li>
+            <li><a href="reports.html">Reports</a></li>
+            <li><a href="settings.html">Settings</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <section id="reports" class="section">
+            <h1>Reports</h1>
+            <div class="report-filters">
+                <label for="startDate">Start Date:</label>
+                <input type="date" id="startDate">
+                <label for="endDate">End Date:</label>
+                <input type="date" id="endDate">
+                <button id="generateReport" class="button">Generate Report</button>
+            </div>
+            <div id="reportSummary" class="report-summary">
+                <!-- Summary statistics will be displayed here -->
+            </div>
+            <div id="reportOutput" class="report-output">
+                <!-- Report data will be displayed here -->
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        Business Permit and Licensing Department, Butuan City, Agusan del Norte
+    </footer>
+
+    <script src="reports.js"></script>
+    <script>
+        document.addEventListener("DOMContentLoaded", () => {
+            const savedSettings = JSON.parse(localStorage.getItem("settings"));
+            if (savedSettings) {
+                document.documentElement.style.setProperty('--bg-color', savedSettings.bgColor);
+                document.documentElement.style.setProperty('--text-color', savedSettings.textColor);
+                document.documentElement.style.setProperty('--font-size', savedSettings.fontSize + 'px');
+                document.documentElement.style.setProperty('--navbar-color', savedSettings.navbarColor);
+    
+                const navbar = document.querySelector(".navbar");
+                navbar.style.backgroundColor = savedSettings.navbarColor;
+    
+                if (savedSettings.mode === "dark") {
+                    document.documentElement.style.backgroundColor = "#333";
+                    document.documentElement.style.color = "#f0f8ff";
+                } else if (savedSettings.mode === "light") {
+                    document.documentElement.style.backgroundColor = "#ffffff";
+                    document.documentElement.style.color = "#000000";
+                } else {
+                    document.documentElement.style.backgroundColor = savedSettings.bgColor;
+                    document.documentElement.style.color = savedSettings.textColor;
+                }
+            }
+        });
+    </script>
+    <script src="sms-email-settings.js"></script>
+
+    
+</body>
+</html>
